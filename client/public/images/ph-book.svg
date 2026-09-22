@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#881337"/>
+      <stop offset="1" stop-color="#e11d48"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#g)"/>
+  <rect x="170" y="140" width="260" height="330" rx="12" fill="none" stroke="#fecdd3" stroke-width="8"/>
+  <rect x="195" y="170" width="210" height="20" rx="4" fill="#fda4af"/>
+  <rect x="195" y="210" width="210" height="10" rx="3" fill="#fda4af" opacity="0.7"/>
+  <rect x="195" y="230" width="160" height="10" rx="3" fill="#fda4af" opacity="0.7"/>
+  <rect x="195" y="250" width="180" height="10" rx="3" fill="#fda4af" opacity="0.7"/>
+  <circle cx="410" cy="440" r="40" fill="#fb7185"/>
+  <path d="M410 415 c14 0 20 12 20 25 0 18-20 30-20 30s-20-12-20-30c0-13 6-25 20-25z" fill="#0f172a"/>
+  <text x="300" y="540" font-family="Segoe UI, Arial, sans-serif" font-size="34" fill="#ffe4e6" text-anchor="middle" font-weight="700">Books &amp; Learning</text>
+  <text x="300" y="578" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#fda4af" text-anchor="middle">Arduino · IoT · Electronics</text>
+</svg>
