@@ -61,18 +61,19 @@ const buildDescription = (title, category, tags) =>
   `Ideal for: robotics, IoT, home automation, smart agriculture and electronics labs. ` +
   `Related: ${tags.join(', ')}.`;
 
-const upsertUser = async ({ name, email, password, role }) => {
+const upsertUser = async ({ name, email, password, passwordHash, role }) => {
   const normalizedEmail = normalizeEmail(email) || email;
+  const creds = passwordHash || password;
   let user = await User.findOne({ email: normalizedEmail });
   if (user) {
     user.name = name;
     user.role = role;
     user.status = 'active';
-    if (password) user.password = password;
+    if (creds) user.password = creds;
     await user.save();
     return user;
   }
-  return User.create({ name, email: normalizedEmail, password, role });
+  return User.create({ name, email: normalizedEmail, password: creds, role });
 };
 
 const run = async () => {
@@ -83,6 +84,7 @@ const run = async () => {
     name: env.admin.name,
     email: env.admin.email,
     password: env.admin.password,
+    passwordHash: env.admin.passwordHash,
     role: 'admin',
   });
   const seller = await upsertUser({

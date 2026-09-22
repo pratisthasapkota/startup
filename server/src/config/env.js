@@ -24,6 +24,7 @@ export const env = {
     name: process.env.ADMIN_NAME || 'Store Admin',
     email: process.env.ADMIN_EMAIL || 'admin@example.com',
     password: process.env.ADMIN_PASSWORD || 'admin123',
+    passwordHash: process.env.ADMIN_PASSWORD_HASH || '',
   },
   cloudinary: {
     cloudName: process.env.CLOUDINARY_CLOUD_NAME || '',

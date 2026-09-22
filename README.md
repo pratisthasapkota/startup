@@ -135,6 +135,7 @@ Change the admin password and JWT secrets before going live.
 | `JWT_EXPIRES_IN` / `JWT_REFRESH_EXPIRES_IN` | Token lifetimes |
 | `CLIENT_URL` | Allowed CORS origin (the storefront URL) |
 | `ADMIN_NAME` / `ADMIN_EMAIL` / `ADMIN_PASSWORD` | Seed admin account |
+| `ADMIN_PASSWORD_HASH` | Optional pre-hashed bcrypt password; takes precedence over `ADMIN_PASSWORD` during seeding |
 | `CLOUDINARY_*` | Optional. Leave blank to store uploads in `server/uploads` |
 
 Generate secrets with:
